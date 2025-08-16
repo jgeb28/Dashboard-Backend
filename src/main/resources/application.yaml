@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dashboard
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dashboard_db
+    username: postgres
+    password: password123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
