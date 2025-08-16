@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface AspectRepository extends JpaRepository<Aspect, Long> {
     List<Aspect> findByUserId(Long userId);
-    @Query("SELECT SUM(asp.points), SUM(asp.scale) FROM Aspect asp WHERE asp.user.id = :userId")
+    @Query("SELECT SUM(a.points), SUM(a.scale) FROM Aspect a WHERE a.user.id = :userId")
     Object getPointsSumAndScalesSum(@Param("userId") Long userId);
 }
